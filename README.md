@@ -5,18 +5,17 @@ I’m a Data Scientist passionate about building end-to-end machine learning pip
 
 ## 🚀 **About Me**
 - **Data Scientist** | 4.5+ years of experience in **AI/ML**
-- Proven success in deploying models for **Demand forecasting**, **optimization**, and **Product Recommendation**
+- Proven success in deploying models for **Demand forecasting**, **Spend Optimization**, and **Product Recommendation**
 - Expertise in cloud solutions: **AWS SageMaker**, **Cloudera Data Science Workbench**, and **Azure Databricks**
-- Strong problem-solving skills recognized in global competitions like **United Nations Unite Ideas Challenge**
-- 🌱 Working on my personal website: https://sohansputhran.github.io/
+- Currently pursuing a **Master's in Artificial Intelligence** at the **Illinois Institute of Technology**, with coursework in Online Social Network Analysis, Deep Learning, Natural Language Processing, and Advance Artificial Intelligence.
 
 ---
 
 ## 🛠️ **Technical Skills**
-- **Data Science / AI**: Deep Learning | NLP | LLMs | Transfer Learning | Recommendation Systems | Marketing Mix Modeling
-- **Languages**: Python | SQL | JavaScript | TypeScript
-- **Libraries/Tools**: Pandas | PyTorch | TensorFlow | Scikit-Learn | Streamlit | Flask | PySpark
-- **Cloud**: AWS SageMaker | Azure ML | Snowflake
+- **Data Science / AI**: Deep Learning | NLP | LLMs | Transfer Learning | Recommendation Systems 
+- **Languages**: Python | SQL | Pyspark | R
+- **Libraries/Tools**: Pandas | PyTorch | TensorFlow | Scikit-Learn | Streamlit | Flask 
+- **Cloud**: AWS SageMaker | Azure Databricks | Jenkins
 - **Other Tools**: Git | Power BI | VS Code | Excel
 
 ---
