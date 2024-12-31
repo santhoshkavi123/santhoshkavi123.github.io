@@ -20,8 +20,6 @@ I’m a Data Scientist passionate about building end-to-end machine learning pip
 
 ---
 
-## 💻 **Featured Projects**
-
 ## 💼 **Professional Experience**
 
 ### **Associate, Specialist Data Scientist**  
