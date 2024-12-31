@@ -7,7 +7,7 @@ I’m a Data Scientist passionate about building end-to-end machine learning pip
 - **Data Scientist** | 4.5+ years of experience in **AI/ML**
 - Proven success in deploying models for **Demand forecasting**, **Spend Optimization**, and **Product Recommendation**
 - Expertise in cloud solutions: **AWS SageMaker**, **Cloudera Data Science Workbench**, and **Azure Databricks**
-- Currently pursuing a **Master's in Artificial Intelligence** at the **Illinois Institute of Technology**, with coursework in Online Social Network Analysis, Deep Learning, Natural Language Processing, and Advance Artificial Intelligence.
+- Currently pursuing a **Master's in Artificial Intelligence** at the **Illinois Institute of Technology**, with coursework in **Online Social Network Analysis, Deep Learning, Natural Language Processing, and Advance Artificial Intelligence**.
 
 ---
 
@@ -48,24 +48,24 @@ I’m a Data Scientist passionate about building end-to-end machine learning pip
 ---
 
 ## 📊 **Work Experience**
-- **Data Scientist**, Lundbeck | *Jan 2022 - May 2024*
-- **Junior Data Scientist**, Airriva | *June 2021 - Dec 2024*
-- **Data Scientist Intern**, Airriva | *Oct 2020 - May 2021*
-- **Full Stack Developer**, Plexus365 | *2017-2018*
+- **Specialist, Data Scientist**, DBS Tech | *Dec 2022 - Jan 2024*
+- **Data Scientist and Information Analyst**, Ernst & Young LLP | *May 2021 - Dec 2022*
+- **Associate Analyst**, Mahindra Integrated Business Solutions | *March 2019 - May 2021*
 
 ---
 
 ## 🎓 **Education**
-- **Master of Data Science**, Illinois Institute of Technology, Chicago
-- **B.E. in Computer Science**, Visvesvaraya Technological University, India
+- **Master of Artificial Intelligence**, Illinois Institute of Technology, Chicago
+- **Post Graduate Program in Data Science and Engineering**, Great Lakes Institute of Management, Chennai
+- **B.Tech. in Electronics and Communication Engineering**, KL University, India
 
 ---
 
 ## 🌟 **Let’s Collaborate!**
-I’m open to projects in **Data Science**, **Machine Learning**, and **AI/ML Engineering**. Feel free to explore my repositories, and let’s innovate together.
+I’m open to projects in **Data Science**, **Machine Learning**, and **AI/ML Engineering**. 
 
-📧 **Contact Me**: [puthran.sohan@gmail.com](mailto:puthran.sohan@gmail.com)  
-🔗 **LinkedIn**: [linkedin.com/in/sohansputhran](https://www.linkedin.com/in/sohansputhran)
+📧 **Contact Me**: [santhoshkavi123@gmail.com](mailto:santhoshkavi123@gmail.com)  
+🔗 **LinkedIn**: [linkedin.com/in/santhoshkavi](https://www.linkedin.com/in/santhosh-k-188337165)
 
 ---
 
