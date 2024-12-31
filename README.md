@@ -4,8 +4,8 @@ I’m a Data Scientist passionate about building end-to-end machine learning pip
 ---
 
 ## 🚀 **About Me**
-- **Data Scientist** | 3+ years of experience in **AI/ML** and **Data Engineering**
-- Proven success in deploying models for **sales forecasting**, **price optimization**, and **occupancy analysis**
+- **Data Scientist** | 4.5+ years of experience in **AI/ML**
+- Proven success in deploying models for **Demand forecasting**, **optimization**, and **Product Recommendation**
 - Expertise in cloud solutions: **AWS SageMaker**, **Azure Data Factory**, and **Snowflake**
 - Strong problem-solving skills recognized in global competitions like **United Nations Unite Ideas Challenge**
 - 🌱 Working on my personal website: https://sohansputhran.github.io/
