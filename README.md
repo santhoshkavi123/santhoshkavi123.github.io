@@ -76,7 +76,7 @@ I’m open to projects in **Data Science**, **Machine Learning**, and **AI/ML En
 📧 **Contact Me**: [santhoshkavi123@gmail.com](mailto:santhoshkavi123@gmail.com)  
 🔗 **LinkedIn**: [linkedin.com/in/santhoshkavi](https://www.linkedin.com/in/santhosh-k-188337165)
 
----
+--
 
 </details> 
 
