@@ -1078,131 +1078,109 @@ body {
     transform: translateX(3px);
 }
 
+
 /* Experience Section */
-.experience-timeline {
-    position: relative;
-    max-width: 800px;
+.experience-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    max-width: 900px;
     margin: 0 auto;
 }
 
-.experience-timeline::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: var(--primary-color);
-    transform: translateX(-50%);
-}
-
-.experience-item {
-    position: relative;
-    margin: 2rem 0;
-    padding: 0 2rem;
-}
-
-.experience-item:nth-child(odd) {
-    text-align: right;
-}
-
-.experience-item:nth-child(even) {
-    text-align: left;
-}
-
-.experience-item:nth-child(odd) .experience-content {
-    margin-right: calc(50% + 2rem);
-}
-
-.experience-item:nth-child(even) .experience-content {
-    margin-left: calc(50% + 2rem);
-}
-
-.experience-content {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: var(--shadow-md);
-    position: relative;
+.experience-card {
+    background: var(--bg-primary);
+    padding: 2.5rem;
+    border-radius: 30px;
+    box-shadow: var(--shadow-lg);
     transition: all 0.3s ease;
+    border: 1px solid var(--border-light);
+    position: relative;
+    overflow: hidden;
 }
 
-.experience-content:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
-}
-
-.experience-content::before {
+.experience-card::before {
     content: '';
     position: absolute;
-    top: 2rem;
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-secondary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.experience-item:nth-child(odd) .experience-content::before {
-    right: -20px;
-    border-left-color: white;
+.experience-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-2xl);
 }
 
-.experience-item:nth-child(even) .experience-content::before {
-    left: -20px;
-    border-right-color: white;
+.experience-card:hover::before {
+    opacity: 1;
 }
 
-.experience-dot {
-    position: absolute;
-    left: 50%;
-    top: 2rem;
-    width: 20px;
-    height: 20px;
-    background: var(--primary-color);
-    border: 4px solid white;
-    border-radius: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    box-shadow: var(--shadow-md);
+.experience-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
-.experience-title {
+.experience-icon {
+    background: var(--gradient-secondary);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.experience-info h3 {
     font-size: 1.4rem;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 0.5rem;
 }
 
-.experience-company {
+.experience-info .company {
     color: var(--primary-color);
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
 }
 
-.experience-duration {
+.experience-info .duration {
     color: var(--text-secondary);
     font-size: 0.9rem;
-    margin-bottom: 1rem;
 }
 
-.experience-description {
+.experience-details {
     color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
 }
 
 .experience-skills {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.6rem;
 }
 
 .experience-skills .skill-tag {
-    background: var(--primary-color);
-    color: white;
-    padding: 0.2rem 0.6rem;
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    padding: 0.4rem 0.8rem;
     border-radius: 15px;
     font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
 }
+
+
 
 /* Contact Section - Fixed text visibility */
 .contact {
@@ -1663,7 +1641,7 @@ body {
         </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- Experience Section - NEW CARD-BASED LAYOUT -->
     <section id="experience" class="section">
         <div class="container">
             <div class="section-header">
@@ -1671,125 +1649,145 @@ body {
                 <p class="section-subtitle">Professional Background in Analytics and Machine Learning</p>
             </div>
             
-            <div class="experience-timeline">
-                <!-- Research Assistant Experience-->
-                <div class="experience-item fade-in">
-                    <div class="experience-dot"></div>
-                    <div class="experience-content">
-                        <h3 class="experience-title">Graduate Research Assistant</h3>
-                        <p class="experience-company">Illinois Institute of Technology</p>
-                        <p class="experience-duration">June 2025 - Present</p>
-                        <p class="experience-description">
-                            Working as a Research Assistant focusing on Brain-Computer Interfaces (BCI), analyzing EEG signals to enable human-machine interaction. 
-                            Performed signal processing, feature extraction, and deep learning modeling for motor imagery and physical interaction tasks, 
-                            contributing to advancements in AI-driven assistive technologies and BCI applications
-                        </p>
-                        <div class="experience-skills">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">EEG Instrument</span>
-                            <span class="skill-tag">Unity Lab</span>
-                            <span class="skill-tag">Deep Learning</span>
-                            <span class="skill-tag">Machine Learning</span>
-                            <span class="skill-tag">Virtual Reality</span>
+            <div class="experience-grid">
+                <!-- Research Assistant -->
+                <div class="experience-card fade-in">
+                    <div class="experience-header">
+                        <div class="experience-icon">
+                            <i class="fas fa-flask"></i>
                         </div>
+                        <div class="experience-info">
+                            <h3>Graduate Research Assistant</h3>
+                            <div class="company">Illinois Institute of Technology</div>
+                            <div class="duration">June 2025 - Present</div>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-details">
+                        Working as a Research Assistant focusing on Brain-Computer Interfaces (BCI), analyzing EEG signals to enable human-machine interaction. Performed signal processing, feature extraction, and deep learning modeling for motor imagery and physical interaction tasks, contributing to advancements in AI-driven assistive technologies and BCI applications.
+                    </div>
+                    
+                    <div class="experience-skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">EEG Instrument</span>
+                        <span class="skill-tag">Unity Lab</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Virtual Reality</span>
                     </div>
                 </div>
 
-                <!-- Research Assistant Experience-->
-                <div class="experience-item fade-in">
-                    <div class="experience-dot"></div>
-                    <div class="experience-content">
-                        <h3 class="experience-title">Graduate Teaching Assistant</h3>
-                        <p class="experience-company">Illinois Institute of Technology</p>
-                        <p class="experience-duration">January 2025 - Present</p>
-                        <p class="experience-description">
-                            Served as a Graduate Teaching Assistant for CS 480 – Introduction to Artificial Intelligence under Professor Jacek Dzikowski. 
-                            Responsibilities included conducting weekly office hours to support students’ understanding
-                            of AI concepts, grading assignments and exams with timely feedback, and assisting in course material preparation. 
-                            Focused on enhancing student learning outcomes by simplifying complex technical topics and fostering an engaging learning environment.
-                        </p>
-                        <div class="experience-skills">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Artificial Intelligence</span>
-                            <span class="skill-tag">A* Algorithm</span>
-                            <span class="skill-tag">Min Max Algorithm</span>
+                <!-- Teaching Assistant -->
+                <div class="experience-card fade-in">
+                    <div class="experience-header">
+                        <div class="experience-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="experience-info">
+                            <h3>Graduate Teaching Assistant</h3>
+                            <div class="company">Illinois Institute of Technology</div>
+                            <div class="duration">January 2025 - Present</div>
                         </div>
                     </div>
-                </div>
-                
-            <!-- DBS Bank Experience--> 
-                <div class="experience-item fade-in">
-                    <div class="experience-dot"></div>
-                    <div class="experience-content">
-                        <h3 class="experience-title">Associate, Specialist, Data Scientist</h3>
-                        <p class="experience-company">DBS(Development Bank of Singapore) Bank</p>
-                        <p class="experience-duration">Dec 2022 - Jan 2024</p>
-                        <p class="experience-description">
-                            Built and deployed ML solutions to improve customer engagement and retention. 
-                            Automated pipelines for term deposit and remittance models, and executed data-driven marketing campaigns, 
-                            achieving a 25% increase in engagement and 15% boost in retention
-                        </p>
-                        <div class="experience-skills">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Pyspark</span>
-                            <span class="skill-tag">Cloudera Data Science Workbench</span>
-                            <span class="skill-tag">Apache Superset</span>
-                            <span class="skill-tag">Mlflow</span>
-                            <span class="skill-tag">Docker</span>
-                            <span class="skill-tag">BitBucket</span>
-                        </div>
+                    
+                    <div class="experience-details">
+                        Served as a Graduate Teaching Assistant for CS 480 – Introduction to Artificial Intelligence under Professor Jacek Dzikowski. Responsibilities included conducting weekly office hours to support students' understanding of AI concepts, grading assignments and exams with timely feedback, and assisting in course material preparation.
+                    </div>
+                    
+                    <div class="experience-skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Artificial Intelligence</span>
+                        <span class="skill-tag">A* Algorithm</span>
+                        <span class="skill-tag">Min Max Algorithm</span>
                     </div>
                 </div>
-                <!-- Ernst & Young LLP-->
-                <div class="experience-item fade-in">
-                    <div class="experience-dot"></div>
-                    <div class="experience-content">
-                        <h3 class="experience-title">Data Scientist and Information Analyst</h3>
-                        <p class="experience-company">Ernst & Young LLP</p>
-                        <p class="experience-duration">May 2021 - December 2022</p>
-                        <p class="experience-description">
-                            Improved demand forecasting accuracy by 4% through a hybrid planning process integrating business insights and ML models.
-                            Cleaned and engineered features using PySpark and Python, handled outliers, and applied models including ARIMA, Prophet,
-                            XGBoost, Random Forest, and Linear Regression in Azure Databricks. Collaborated with data scientists and engineers to 
-                            deploy models into production for more reliable sales forecasting
-                        </p>
-                        <div class="experience-skills">
-                            <span class="skill-tag">Time Series Forecasting</span>
-                            <span class="skill-tag">Azure Databricks</span>
-                            <span class="skill-tag">Pyspark</span>
-                            <span class="skill-tag">PowerBI</span>
-                            <span class="skill-tag">Azure DataFactory</span>
-                            <span class="skill-tag">Azure Data Lake Storage</span>
+
+                <!-- DBS Bank -->
+                <div class="experience-card fade-in">
+                    <div class="experience-header">
+                        <div class="experience-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="experience-info">
+                            <h3>Associate, Specialist, Data Scientist</h3>
+                            <div class="company">DBS (Development Bank of Singapore) Bank</div>
+                            <div class="duration">Dec 2022 - Jan 2024</div>
                         </div>
                     </div>
+                    
+                    <div class="experience-details">
+                        Built and deployed ML solutions to improve customer engagement and retention. Automated pipelines for term deposit and remittance models, and executed data-driven marketing campaigns, achieving a 25% increase in engagement and 15% boost in retention.
+                    </div>
+                    
+                    <div class="experience-skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Pyspark</span>
+                        <span class="skill-tag">Cloudera Data Science Workbench</span>
+                        <span class="skill-tag">Apache Superset</span>
+                        <span class="skill-tag">Mlflow</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">BitBucket</span>
+                    </div>
                 </div>
-                <!-- Mahindra & Mahindra-->
-                <div class="experience-item fade-in">
-                    <div class="experience-dot"></div>
-                    <div class="experience-content">
-                        <h3 class="experience-title">Associate Analyst</h3>
-                        <p class="experience-company">Mahindra & Mahindra</p>
-                        <p class="experience-duration">March 2019 - May 2021</p>
-                        <p class="experience-description">
-                            Enhanced vehicle exchange rates by 11% through predictive modeling and targeted customer outreach using Logistic Regression. 
-                            Developed SQL Server procedures for commercial vehicle data, extracted and secured financial data via APIs, and built a 
-                            Financial Forecasting Dashboard in Qlik Sense covering 10 key categories for 3,500 suppliers, including Dupont Analysis to 
-                            assess financial strength.
-                        </p>
-                        <div class="experience-skills">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">SQL Server</span>
-                            <span class="skill-tag">Qlik Sense</span>
-                            <span class="skill-tag">Machine Learning</span>
-                            <span class="skill-tag">Natural Language Processing</span>
-                            <span class="skill-tag">Financial Analysis</span>
+
+                <!-- Ernst & Young -->
+                <div class="experience-card fade-in">
+                    <div class="experience-header">
+                        <div class="experience-icon">
+                            <i class="fas fa-chart-line"></i>
                         </div>
+                        <div class="experience-info">
+                            <h3>Data Scientist and Information Analyst</h3>
+                            <div class="company">Ernst & Young LLP</div>
+                            <div class="duration">May 2021 - December 2022</div>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-details">
+                        Improved demand forecasting accuracy by 4% through a hybrid planning process integrating business insights and ML models. Cleaned and engineered features using PySpark and Python, handled outliers, and applied models including ARIMA, Prophet, XGBoost, Random Forest, and Linear Regression in Azure Databricks.
+                    </div>
+                    
+                    <div class="experience-skills">
+                        <span class="skill-tag">Time Series Forecasting</span>
+                        <span class="skill-tag">Azure Databricks</span>
+                        <span class="skill-tag">Pyspark</span>
+                        <span class="skill-tag">PowerBI</span>
+                        <span class="skill-tag">Azure DataFactory</span>
+                        <span class="skill-tag">Azure Data Lake Storage</span>
+                    </div>
+                </div>
+
+                <!-- Mahindra & Mahindra -->
+                <div class="experience-card fade-in">
+                    <div class="experience-header">
+                        <div class="experience-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="experience-info">
+                            <h3>Associate Analyst</h3>
+                            <div class="company">Mahindra & Mahindra</div>
+                            <div class="duration">March 2019 - May 2021</div>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-details">
+                        Enhanced vehicle exchange rates by 11% through predictive modeling and targeted customer outreach using Logistic Regression. Developed SQL Server procedures for commercial vehicle data, extracted and secured financial data via APIs, and built a Financial Forecasting Dashboard in Qlik Sense covering 10 key categories for 3,500 suppliers.
+                    </div>
+                    
+                    <div class="experience-skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL Server</span>
+                        <span class="skill-tag">Qlik Sense</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Natural Language Processing</span>
+                        <span class="skill-tag">Financial Analysis</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+   
     <!-- Skills Section -->
     <section id="skills" class="section">
         <div class="container">
@@ -1908,11 +1906,11 @@ body {
                             <span class="tech-tag">Feature Engine</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/santhoshkavi123/TENSORFLOW/tree/main/Human_Activity_Recognition_LSTM" class="project-link">
+                            <a href="https://github.com/santhoshkavi123/DeepLearning/blob/main/Time_Series_Forecasting/Notebooks/m5_forecasting_EDA_NTBK.ipynb" class="project-link">
                                 <i class="fab fa-github"></i> Code
                             </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-file-pdf"></i> Paper
+                            <a href="https://github.com/santhoshkavi123/DeepLearning/blob/main/Time_Series_Forecasting/Presentations/ThesisPresentationRecording.mp4" class="project-link">
+                                <i class="fas fa-file-pdf"></i> Demo
                             </a>
                         </div>
                     </div>
@@ -1940,11 +1938,11 @@ body {
                             <span class="tech-tag">Transformer Decoder</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/santhoshkavi123/TENSORFLOW/blob/main/Visual_Question_Answering_ResearchFellow/src/VQATransformer.py" class="project-link">
+                            <a href="https://github.com/santhoshkavi123/TENSORFLOW/blob/main/Visual_Question_Answering_ResearchFellow/NTBK_TensorflowDataset.ipynb" class="project-link">
                                 <i class="fab fa-github"></i> Code
                             </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-file-pdf"></i> Paper
+                            <a href="https://github.com/santhoshkavi123/TENSORFLOW/blob/main/Visual_Question_Answering_ResearchFellow/papers/VisualQuestionAnswering.pdf" class="project-link">
+                                <i class="fas fa-file-pdf"></i> Referenced Paper
                             </a>
                         </div>
                     </div>
@@ -1956,22 +1954,25 @@ body {
                         <i class="fas fa-comments"></i>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Wine Recommendation using RAG</h3>
-                        <p class="project-description">Developed a wine recommendation system leveraging Retrieval-Augmented Generation (RAG) with LLMs. 
-                            Built a pipeline that retrieves relevant information from a curated wine knowledge base and integrates it with GPT models
-                            to generate context-aware, personalized recommendations. Focused on enhancing accuracy, relevance, and explainability
-                            of suggestions by combining structured retrieval with generative reasoning</p>
+                        <h3 class="project-title">MedClaimAI - Intelligent Claim Validator</h3>
+                        <p class="project-description">MedClaimAI is an intelligent healthcare application designed to predict medical insurance claim costs in real time from patient discharge summaries and medical reports.
+                             Built with a Flask-based frontend, the system allows users to upload PDFs and instantly view cost predictions through an intuitive interface. 
+                             Using PyMuPDF, it extracts key medical entities such as diagnoses, procedures, and treatment details. 
+                             The backend leverages LangChain and OpenAI GPT models to interpret complex medical and insurance policy documents, ensuring accurate and context-aware predictions. 
+                             A MongoDB Atlas Vector Search database powers semantic retrieval of records, while GitLab supports version control, collaboration, and CI/CD integration throughout the project lifecycle</p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Qdrant Vector Database</span>
-                            <span class="tech-tag">LLM</span>
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">RAG</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Mongo DB Vector Search</span>
                             <span class="tech-tag">OpenAI</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/santhoshkavi123/DeepLearning/tree/main/RAG" class="project-link">
+                            <a href="https://gitlab.com/medhack123group/MedAssistAgent/-/blob/main/main/GeneratePDFTextEmbeddings.py?ref_type=heads" class="project-link">
                                 <i class="fab fa-github"></i> Code
                             </a>
-                            <a href="#" class="project-link">
+                            <a href="https://www.loom.com/share/2543e55d56094702ba4c042b60016a51" class="project-link">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                         </div>
@@ -1998,9 +1999,6 @@ body {
                         <div class="project-links">
                             <a href="https://github.com/santhoshkavi123/TENSORFLOW/tree/main/Human_Activity_Recognition_LSTM" class="project-link">
                                 <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-file-pdf"></i> Paper
                             </a>
                         </div>
                     </div>
